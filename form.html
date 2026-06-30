@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body class="form-page">
+  <!-- NAVBAR -->
+  <header class="nav-wrap">
+    <nav class="navbar">
+    <div class="logo">Student Panel</div>
+    <div class="nav-buttons">
+    <a href="studentlist.html">Student List</a>
+    <a href="#" onclick="logout()">Sign Out</a>
+  </div>
+</nav>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="page-wrap">
+    <form onsubmit="return false;">
+      <div class="form">
+        <h2>Student Profile</h2>
+
+        <label class="label" for="Profile">Profile:</label>
+        <input class="input" type="file" name="Profile" id="Profile" accept=".jpg,.png"><br>
+
+        <label class="label" for="Name">Name:</label>
+        <input class="input" type="text" name="Name" id="Name"><br>
+
+        <label class="label" for="Department">Department:</label>
+        <select class="select" id="Department">
+          <option value="" disabled selected hidden>Select your department</option>
+          <option value="CSE">CSE</option>
+          <option value="AIDS">AIDS</option>
+          <option value="CSBS">CSBS</option>
+        </select><br>
+
+        <label class="label" for="Year">Year:</label>
+        <select class="select" id="Year">
+          <option value="" disabled selected hidden>Select Your Year</option>
+          <option value="1st Year">1st Year</option>
+          <option value="2nd Year">2nd Year</option>
+          <option value="3rd Year">3rd Year</option>
+          <option value="4th Year">4th Year</option>
+        </select><br>
+
+        <div class="Gender" >
+          <label class="label1" for="Gender">Gender:</label>
+          <label class="label"><input type="radio" name="Gender" value="Male"> Male</label>
+          <label class="label"><input type="radio" name="Gender" value="Female"> Female</label>
+          <label class="label"><input type="radio" name="Gender" value="Others"> Others</label>
+        </div>
+
+        <div class="skill">
+          <label class="label1" for="Skill">Skill:</label>
+          <label><input type="checkbox" name="Skill" value="Python"> Python</label>
+          <label><input type="checkbox" name="Skill" value="Java"> Java</label>
+        </div>
+
+        <input class="button" type="button" value="Submit" onclick="adddata()">
+      </div>
+
+
+  <script src="script.js"></script>
+</script>
+</body>
+</html>

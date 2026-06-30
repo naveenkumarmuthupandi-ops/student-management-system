@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student List</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body class="list-page">
+<nav class="navbar">
+  <div class="logo">Student List</div>
+  <div class="nav-buttons">
+    <a href="form.html">Add Student</a>
+    <a href="#" onclick="logout()">Sign Out</a>
+  </div>
+</nav>
+
+<h2>Student List</h2>
+
+<input 
+  type="text" 
+  id="searchInput" 
+  placeholder="Search..." 
+  onkeyup="searchData()"
+>
+
+<!-- ✅ IMPORTANT WRAPPER -->
+<div class="table-container">
+  <table class="table" id="studentTable">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Photo</th>
+        <th>Name</th>
+        <th>Dept</th>
+        <th>Year</th>
+        <th>Gender</th>
+        <th>Skills</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

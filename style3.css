@@ -1,0 +1,135 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+body{
+  background:#f4f6fb;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#004aad;
+  color:white;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:600;
+}
+
+.nav-buttons a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+}
+
+.nav-buttons a:hover{
+  text-decoration:underline;
+}
+
+/* TITLE */
+h2{
+  text-align:center;
+  margin:25px 0 10px;
+  color:#004aad;
+}
+
+/* SEARCH */
+#searchInput{
+  display:block;
+  margin:10px auto 20px;
+  padding:10px 14px;
+  width:260px;
+  border-radius:8px;
+  border:1px solid #d0d7e2;
+  outline:none;
+}
+
+#searchInput:focus{
+  border-color:#004aad;
+  box-shadow:0 0 0 2px rgba(0,74,173,0.15);
+}
+
+/* TABLE CONTAINER */
+.table-container{
+  width:95%;
+  max-width:1100px;
+  margin:0 auto 30px;
+  background:white;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  overflow-x:auto;
+}
+
+/* TABLE */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  text-align:center;
+}
+
+.table thead th{
+  background:#004aad;
+  color:white;
+  padding:12px;
+  font-weight:600;
+}
+
+.table tbody td{
+  padding:12px;
+  border-bottom:1px solid #eee;
+}
+
+.table tbody tr:nth-child(even){
+  background:#f8fbff;
+}
+
+/* IMAGE */
+.table img{
+  width:55px;
+  height:55px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid #004aad;
+  padding:2px;
+  background:white;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  transition:.3s;
+}
+
+.table img:hover{
+  transform:scale(1.1);
+}
+
+/* BUTTONS */
+.table button{
+  padding:6px 12px;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  font-weight:500;
+  margin:3px;
+  transition:.2s;
+}
+
+.table button:first-child{
+  background:#ffd54f;
+}
+
+.table button:last-child{
+  background:#ff6b6b;
+  color:white;
+}
+
+.table button:hover{
+  transform:translateY(-1px);
+}

@@ -1,0 +1,214 @@
+
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  background:#004aad;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  animation: navDrop 0.7s ease;
+}
+
+.logo{
+  color:white;
+  font-size:22px;
+  font-weight:600;
+}
+
+.nav-buttons a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  border:1px solid white;
+  padding:7px 14px;
+  border-radius:6px;
+  transition:.3s;
+}
+
+.nav-buttons a:hover{
+  background:white;
+  color:#004aad;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:140px 20px;
+  color:white;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f")
+    center/cover no-repeat;
+
+  animation: bgZoom 18s ease-in-out infinite alternate;
+}
+
+.hero h1{
+  font-size:2.8rem;
+  margin-bottom:15px;
+  animation: fadeUp 1s ease forwards;
+  opacity:0;
+}
+
+.hero p{
+  font-size:1.1rem;
+  margin-bottom:25px;
+  animation: fadeUp 1s ease forwards;
+  animation-delay:.2s;
+  opacity:0;
+}
+
+/* HERO BUTTON */
+.hero-btn{
+  display:inline-block;
+  padding:12px 26px;
+  background:white;
+  color:#004aad;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+  animation: fadeUp 1s ease forwards;
+  animation-delay:.4s;
+  opacity:0;
+}
+
+.hero-btn:hover{
+  transform:translateY(-3px) scale(1.05);
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* FEATURES */
+.features{
+  text-align:center;
+  padding:70px 20px;
+  background:#f4f6fb;
+}
+
+.features h2{
+  color:#004aad;
+  margin-bottom:35px;
+  animation: fadeIn .8s ease;
+}
+
+.feature-list{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+/* FEATURE CARD */
+.feature-box{
+  background:white;
+  padding:25px;
+  width:280px;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  transition:.35s;
+  opacity:0;
+  transform:translateY(40px);
+  animation: cardPop .8s ease forwards;
+}
+
+.feature-box:nth-child(1){ animation-delay:.2s; }
+.feature-box:nth-child(2){ animation-delay:.4s; }
+.feature-box:nth-child(3){ animation-delay:.6s; }
+
+.feature-box:hover{
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 10px 28px rgba(0,74,173,0.25);
+}
+
+.feature-box h3{
+  color:#004aad;
+  margin-bottom:10px;
+}
+
+/* SECURE CARD */
+.secure{
+  padding:50px 20px;
+  background:white;
+  text-align:center;
+}
+
+.secure-card{
+  background:#004aad;
+  color:white;
+  padding:35px;
+  border-radius:14px;
+  max-width:600px;
+  margin:auto;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  animation: glowPulse 2.5s infinite;
+}
+
+/* FOOTER */
+.footer{
+  background:#004aad;
+  color:white;
+  text-align:center;
+  padding:18px;
+  font-size:.9rem;
+}
+
+
+
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes fadeUp{
+  from{ opacity:0; transform:translateY(35px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+@keyframes fadeIn{
+  from{ opacity:0; }
+  to{ opacity:1; }
+}
+
+@keyframes cardPop{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes navDrop{
+  from{ transform:translateY(-40px); opacity:0; }
+  to{ transform:translateY(0); opacity:1; }
+}
+
+@keyframes bgZoom{
+  from{ background-size:100%; }
+  to{ background-size:110%; }
+}
+
+@keyframes glowPulse{
+  0%{ box-shadow:0 0 0 rgba(255,255,255,0.4); }
+  50%{ box-shadow:0 0 25px rgba(255,255,255,0.6); }
+  100%{ box-shadow:0 0 0 rgba(255,255,255,0.4); }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .navbar{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+}

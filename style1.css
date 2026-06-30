@@ -1,0 +1,162 @@
+/* ---------------- RESET ---------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------------- BODY ---------------- */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+      rgba(0, 74, 173, 0.65),
+      rgba(0, 74, 173, 0.65)
+    ),
+    url("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f")
+      center/cover no-repeat;
+
+  animation: bgFade 1.2s ease-in-out;
+}
+
+/* ---------------- CARD ---------------- */
+.wrapper {
+  background-color: white;
+  width: 400px;
+  padding: 40px 35px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  animation: cardDrop 0.8s ease forwards;
+}
+
+.wrapper h1 {
+  color: #004aad;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* ---------------- FORM ---------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form div {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d0d7e2;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f8faff;
+  transition: 0.3s;
+}
+
+form div:focus-within {
+  border-color: #004aad;
+  background-color: white;
+  box-shadow: 0 0 0 2px rgba(0, 74, 173, 0.15);
+}
+
+/* ---------------- LABEL ---------------- */
+label {
+  color: #004aad;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* ---------------- INPUT ---------------- */
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+}
+
+/* ---------------- BUTTON ---------------- */
+button {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #00378a;
+  transform: translateY(-2px);
+}
+
+/* ---------------- MESSAGE ---------------- */
+#msg {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+/* ---------------- ERROR ANIMATION ---------------- */
+.shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  50% { transform: translateX(6px); }
+  75% { transform: translateX(-6px); }
+  100% { transform: translateX(0); }
+}
+
+/* ---------------- LINKS ---------------- */
+p {
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+a {
+  color: #004aad;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes bgFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cardDrop {
+  from {
+    transform: translateY(-40px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* ---------------- MOBILE ---------------- */
+@media (max-width: 480px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+
+

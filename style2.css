@@ -1,0 +1,159 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Poppins", sans-serif;
+}
+
+body{
+  background:#f4f6fb;
+}
+
+/* Navbar */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#004aad;
+  color:white;
+}
+
+.nav-buttons a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+  font-weight:500;
+}
+
+.nav-buttons a:hover{
+  text-decoration:underline;
+}
+
+/* Page */
+.page-wrap{
+  max-width:1100px;
+  margin:30px auto;
+  padding:10px;
+  animation:fadeSlide .5s ease;
+}
+
+/* Form */
+.form{
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+  max-width:420px;
+  margin:auto;
+}
+
+.form h2{
+  text-align:center;
+  color:#004aad;
+  margin-bottom:15px;
+}
+
+.label{
+  display:block;
+  margin-top:10px;
+  font-weight:500;
+  color:#004aad;
+}
+
+.input, .select{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border:1px solid #dbe2ec;
+  border-radius:8px;
+  background:#f8fbff;
+}
+
+.Gender, .skill{
+  margin:12px 0;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.button{
+  width:100%;
+  padding:11px;
+  border:none;
+  border-radius:10px;
+  background:#004aad;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+.button:hover{
+  background:#00378a;
+}
+
+/* Search */
+.searchbar{
+  display:block;
+  max-width:420px;
+  margin:25px auto 10px;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #dbe2ec;
+}
+
+/* Table */
+.table-container{
+  margin-top:15px;
+  background:white;
+  padding:15px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+  overflow-x:auto;
+}
+
+.table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.table th{
+  background:#004aad;
+  color:white;
+  padding:10px;
+}
+
+.table td{
+  padding:10px;
+  text-align:center;
+  border-bottom:1px solid #eee;
+}
+
+.table tr:nth-child(even){
+  background:#f8fbff;
+}
+
+.table button{
+  padding:6px 10px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  margin:2px;
+}
+
+.table button:first-child{
+  background:#ffd54f;
+}
+
+.table button:last-child{
+  background:#ff6b6b;
+  color:white;
+}
+
+
+
+@keyframes fadeSlide{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
